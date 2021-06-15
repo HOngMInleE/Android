@@ -39,11 +39,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 ComponentName name = new ComponentName("org.techtown.a0615samplecallintent",
                         "org.techtown.a0615samplecallintent.MenuActivity");
+
+                intent.putExtra("username", "park");
+                intent.putExtra("password", "1234");
+
                 intent.setComponent(name);
                 startActivityForResult(intent,101);
-
-
             }
         });
+
     }
 }
