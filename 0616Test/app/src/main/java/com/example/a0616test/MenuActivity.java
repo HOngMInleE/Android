@@ -17,6 +17,8 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        Toast.makeText(this, "관리 메뉴 화면", Toast.LENGTH_LONG).show();
+
         Button button1 = findViewById(R.id.button1);
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -28,10 +30,5 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        Intent receivedIntent = getIntent();
-        String username = receivedIntent.getStringExtra("username");
-        String password = receivedIntent.getStringExtra("password");
-
-        Toast.makeText(this, "관리 메뉴 화면", Toast.LENGTH_LONG).show();
     }
 }
