@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import androidx.fragment.app.Fragment;
 
 
-public class ViewFragment extends Fragment {
+public class ViewerFragment extends Fragment {
 
     ImageView imageView;
 
@@ -17,7 +17,7 @@ public class ViewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_view, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_viewer, container, false);
 
         imageView = rootView.findViewById(R.id.imageView1);
         return rootView;
