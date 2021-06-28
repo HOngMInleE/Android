@@ -17,7 +17,7 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_2, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_3, container, false);
 
         Button buttonMain = rootView.findViewById(R.id.buttonMain);
 
@@ -32,4 +32,5 @@ public class Fragment3 extends Fragment {
 
         return rootView;
     }
+
 }

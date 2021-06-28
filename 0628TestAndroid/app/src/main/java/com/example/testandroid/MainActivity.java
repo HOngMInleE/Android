@@ -43,10 +43,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onButton1(View view) {
+        if ( view != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
+        }
 
     }
 
     public void onButton2(View view) {
-
+        if ( view != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
+        }
     }
+
+
+
 }

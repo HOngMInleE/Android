@@ -7,12 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <fragment
+        android:name="com.example.testandroid.Fragment1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:onClick="onButton1"
-        android:text="RGB 색상값" />
+        android:layout_width="wrap_content"
+        android:text="RGB 색상값"
+        android:layout_height="wrap_content"
+         />
 
     <Button
         android:id="@+id/button2"
@@ -21,12 +27,6 @@
         android:layout_toRightOf="@+id/button1"
         android:onClick="onButton2"
         android:text="RGB 란?" />
-
-    <fragment
-        android:name="com.example.testandroid.Fragment1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        ></fragment>
 
 
 </RelativeLayout>
