@@ -25,7 +25,7 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity activity = (MainActivity) getActivity();
-                activity.onGotoMainFragment(0);
+                activity.onGotoMainFragment();
             }
         });
 

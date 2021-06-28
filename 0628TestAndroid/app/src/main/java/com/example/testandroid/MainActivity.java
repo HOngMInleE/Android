@@ -31,28 +31,31 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void onGotoMainFragment(int index) {
-        if ( index == 0) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
-        } else if ( index == 1) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
-        } else if ( index == 2) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
-        }
+    public void onGotoMainFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
+//        if ( index == 0) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
+//        } else if ( index == 1) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
+//        } else if ( index == 2) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
+//        }
     }
 
 
     public void onButton1(View view) {
-        if ( view != null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
-        }
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment2).commit();
+//        if ( view != null) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
+//        }
+//
     }
-
+//
     public void onButton2(View view) {
-        if ( view != null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
-        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment3).commit();
+//        if ( view != null) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
+//        }
     }
 
 
