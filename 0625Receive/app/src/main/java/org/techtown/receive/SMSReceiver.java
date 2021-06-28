@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.util.Log;
 
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -23,7 +24,6 @@ public class SMSReceiver extends BroadcastReceiver {
 
         Bundle bundle = intent.getExtras();
         SmsMessage[] messages = parseSmsMessage(bundle);
-
         if (messages != null && messages.length > 0) {
             String sender = messages[0].getOriginatingAddress();
             Log.i(TAG, "SMS sender : " + sender);
@@ -35,17 +35,16 @@ public class SMSReceiver extends BroadcastReceiver {
             Log.i(TAG, "SMS received date : " + receivedDate.toString());
 
             sendToActivity(context, sender, contents, receivedDate);
+
         }
     }
 
     private SmsMessage[] parseSmsMessage(Bundle bundle) {
-
         Object[] objs = (Object[]) bundle.get("pdus");
+
         SmsMessage[] messages = new SmsMessage[objs.length];
-
         int smsCount = objs.length;
-        for (int i=0; i < smsCount; i++) {
-
+        for (int i = 0; i < smsCount; i++) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 String format = bundle.getString("format");
                 messages[i] = SmsMessage.createFromPdu((byte[]) objs[i], format);
@@ -59,20 +58,10 @@ public class SMSReceiver extends BroadcastReceiver {
 
     private void sendToActivity(Context context, String sender, String contents, Date receivedDate) {
         Intent myIntent = new Intent(context, SmsActivity.class);
-
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|
-                Intent.FLAG_ACTIVITY_SINGLE_TOP|
-                Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
+        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_SINGLE_TOP|Intent.FLAG_ACTIVITY_CLEAR_TOP);
         myIntent.putExtra("sender", sender);
         myIntent.putExtra("contents", contents);
-        myIntent.putExtra("receivedDate", format.format(receivedDate) );
-
-
+        myIntent.putExtra("receivedDate", format.format(receivedDate));
         context.startActivity(myIntent);
     }
-
-
-
-
 }

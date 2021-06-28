@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SmsActivity extends AppCompatActivity {
 
-    EditText editText1;
+    EditText editText;
     EditText editText2;
     EditText editText3;
 
@@ -19,14 +19,14 @@ public class SmsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
 
-        editText1 = findViewById(R.id.editText1);
+        editText = findViewById(R.id.editText1);
         editText2 = findViewById(R.id.editText2);
         editText3 = findViewById(R.id.editText3);
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 finish();
             }
         });
@@ -43,16 +43,14 @@ public class SmsActivity extends AppCompatActivity {
     }
 
     private void processIntent(Intent intent) {
-
-        if(intent != null) {
+        if (intent != null) {
             String sender = intent.getStringExtra("sender");
             String contents = intent.getStringExtra("contents");
-            String receiveDate = intent.getStringExtra("receiveDate");
+            String receivedDate = intent.getStringExtra("receivedDate");
 
-            editText1.setText(sender);
+            editText.setText(sender);
             editText2.setText(contents);
-            editText3.setText(receiveDate);
+            editText3.setText(receivedDate);
         }
-
     }
 }
