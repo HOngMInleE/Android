@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.0625Receive">
+        <activity android:name=".SmsActivity"></activity>
+
         <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
