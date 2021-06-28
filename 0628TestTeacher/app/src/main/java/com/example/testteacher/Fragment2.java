@@ -19,12 +19,12 @@ public class Fragment2 extends Fragment {
         // Inflate the layout for this fragment
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_2, container, false);
 
-        Button button = rootView.findViewById(R.id.button);
+        Button button = rootView.findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity activity = (MainActivity) getActivity();
-                activity.onGotoMainFragment();
+                activity.onButton2(v);
 
             }
         });

@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
 
-        button1.findViewById(R.id.button1);
-        button2.findViewById(R.id.button2);
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
 
     }
 
