@@ -1,4 +1,4 @@
-package org.techtown.service;
+package org.techtown.a0629delayed;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("org.techtown.service", appContext.getPackageName());
+        assertEquals("org.techtown.a0629delayed", appContext.getPackageName());
     }
 }
