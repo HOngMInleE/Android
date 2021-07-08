@@ -44,16 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                
-                // 뒤로 가기?????
+            public void onClick(View v) {  //// 뒤로 가기?????
+
             }
         });
 
         buttonFor.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onClick(View v) { // 앞으로 가기 ????
             }
         });
 
